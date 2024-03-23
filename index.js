@@ -17,9 +17,9 @@ inquirer.prompt([
     })
     .catch((error) => {
         if (error.isTtyError) {
-            // Prompt couldn't be rendered in the current environment
+            console.error('Error rendering the prompt:', error);
         } else {
-            // Something else went wrong
+            console.error('An error occurred while processing input:', error);
         }
     });
 
