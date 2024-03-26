@@ -1,6 +1,8 @@
-//1. Use the inquirer npm package to get user input.
-//2. Use the qr-image npm package to turn the user entered URL into a QR code image.
-//3. Create a txt file to save the user input using the native fs node module.
+/*
+1. Use the inquirer npm package to get user input.
+2. Use the qr-image npm package to turn the user entered URL into a QR code image.
+3. Create a txt file to save the user input using the native fs node module.
+*/
 import inquirer from 'inquirer';
 import qr from 'qr-image';
 import fs from 'fs';
@@ -24,7 +26,6 @@ inquirer.prompt([
     });
 
 function generateQRCode(url) {
-    // const qrCode = qr.imageSync(url, { type: 'png' });
     const qrCode = qr.image(url, { type: 'png' });
     const output = fs.createWriteStream('QRCode.png');
     qrCode.pipe(output);
@@ -33,7 +34,7 @@ function generateQRCode(url) {
 }
 
 function saveInputToFile(url) {
-    fs.writeFile('userInput.txt', url, err => {
+    fs.writeFile('URL.txt', url, err => {
         if (err) {
             console.error('Error saving the URL to a file:', err);
             return;
