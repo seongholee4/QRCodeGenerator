@@ -1,5 +1,5 @@
 {
-  "name": "assignment7_npm",
+  "name": "assignment6_npm",
   "version": "1.0.0",
   "description": "npm package use: inquirer, qr-image, native fs",
   "main": "index.js",
