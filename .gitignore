@@ -1,3 +1,4 @@
 node_modules
-*.png
-*.txt
+
+QRCode.png
+URL.txt
